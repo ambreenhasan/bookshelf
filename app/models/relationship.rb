@@ -1,0 +1,3 @@
+class Relationship < ActiveRecord::Base
+  # Remember to create a migration!
+end
