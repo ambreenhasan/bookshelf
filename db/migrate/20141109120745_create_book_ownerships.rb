@@ -1,6 +1,6 @@
 class CreateBookOwnerships < ActiveRecord::Migration
   def change
-    create_table :bookownerships do |t|
+    create_table :book_ownerships do |t|
       t.belongs_to :user
       t.belongs_to :book
       t.string :book_review
