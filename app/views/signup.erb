@@ -3,13 +3,13 @@
    <form role="form" action="/signup" method="post">
       <div class="form-group">
          <label for="name" class="labels">Name</label>
-         <input type="text" class="form-control" id="name" name="name"
+         <input type="text" class="form-control" id="name" name="user[name]"
             placeholder="Enter Name">
             <label for="name" class="labels">Email</label>
-         <input type="text" class="form-control" id="email" name="email"
+         <input type="text" class="form-control" id="email" name="user[email]"
             placeholder="Enter Email">
             <label for="name" class="labels">Password</label>
-         <input type="password" class="form-control" id="email" name="password_hash"
+         <input type="password" class="form-control" id="email" name="user[password_hash]"
             placeholder="Enter Password">
       </div>
       <button type="submit" class="btn btn-default">Submit</button>
