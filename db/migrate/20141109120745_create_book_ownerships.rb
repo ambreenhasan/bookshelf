@@ -1,4 +1,4 @@
-class CreateBookownerships < ActiveRecord::Migration
+class CreateBookOwnerships < ActiveRecord::Migration
   def change
     create_table :bookownerships do |t|
       t.belongs_to :user
