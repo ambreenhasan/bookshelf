@@ -1,3 +1,3 @@
-get '/account'
+get '/account' do
   erb :account
 end

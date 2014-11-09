@@ -14,8 +14,8 @@ end
 
 post '/signup' do
   #creates a new user and redirects to account page
-  new_user = User.create(params[:user])
-  session[:user_id] = new_user.id
+  current_user = User.create(params[:user])
+  session[:user_id] = current_user.id
   redirect '/account'
 end
 
@@ -25,10 +25,10 @@ get '/login' do
 end
 
 post '/login' do
-  user = User.find(params[:id])
+  current_user = User.find_by_email(params[:email])
 
-  if user.password == params[:password]
-    session[:user_id] = user.id
+  if current_user.password == params[:password]
+    session[:user_id] = current_user.id
     redirect '/account'
   else
     redirect '/'

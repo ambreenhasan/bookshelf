@@ -31,13 +31,9 @@ ul > li {
   padding: 10px;
 }
 
-#register {
+#register, #login {
   padding-top: 10px;
   margin-right: 300px;
   margin-left: 300px;
   text-align: center;
-}
-
-.labels {
-  text-align: left;
 }
