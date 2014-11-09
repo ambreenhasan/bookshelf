@@ -1,0 +1,43 @@
+#index_container {
+  margin-top: 130px;
+  text-align: center;
+  font-family: 'Arimo', sans-serif;
+  background-color:
+}
+
+#welcome {
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#bookshelf {
+  font-size: 60px;
+}
+
+#tagline {
+  margin-top: 20px;
+  font-size: 40px;
+}
+#navigation {
+  margin-top: 10px;
+}
+
+ul > li {
+  font-size: 16px;
+  list-style-type: none;
+  display: inline-block;
+  text-align: right;
+  padding: 10px;
+}
+
+#register {
+  padding-top: 10px;
+  margin-right: 300px;
+  margin-left: 300px;
+  text-align: center;
+}
+
+.labels {
+  text-align: left;
+}
