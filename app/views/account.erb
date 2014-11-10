@@ -1,16 +1,38 @@
-<a href="/logout">logout</a>
+<header>
+  <span id="logout"><a href="/logout">logout</a></span>
+  <!-- search for books -->
+  <!-- search for users-->
+</header>
 
 <div class="user_container">
-<% if current_user %>
+  <div class="page-header">
+    <% if current_user %>
   <h2>Welcome <%= current_user.name %></h2>
 <% end %>
+  </div>
+  <ul class="nav nav-pills" role="tablist">
+    <li role="presentation" class="active">
+      <a href="#">Profile</a>
+    </li>
+    <li role="presentation">
+      <a href="#">Currently Reading</a>
+      <!-- partials -->
+    </li>
+    <li role="presentation">
+      <a href="#">Completed</a>
+    </li>
+    <li role="presentation">
+      <a href="#">Reviews</a>
+    </li>
+  </ul>
+
+  <!-- add panel for user profile -->
+  <!-- followers -->
+  <!-- following -->
+  <!-- following feed -->
 </div>
 
 
-<!-- currently reading -->
-<!-- completed books -->
-<!-- search for books -->
-<!-- search for users-->
-<!-- followers -->
-<!-- following -->
-<!-- following feed -->
+
+
+

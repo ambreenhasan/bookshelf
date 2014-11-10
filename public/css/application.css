@@ -37,3 +37,11 @@ ul > li {
   margin-left: 300px;
   text-align: center;
 }
+
+.user_container {
+  margin-left: 20px;
+}
+
+#logout a:link, a:visited {
+  margin-left: 20px;
+}
