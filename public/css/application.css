@@ -45,3 +45,10 @@ ul > li {
 #logout a:link, a:visited {
   margin-left: 20px;
 }
+
+.panel, .panel-info {
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 300px;
+  margin-right: 300px;
+}

@@ -1,0 +1,53 @@
+<header>
+  <span id="logout"><a href="/logout">logout</a></span>
+  <span><a href="/books">view all books</a></span>
+  <!-- search for books -->
+  <!-- search for users-->
+</header>
+
+<div class="user_container">
+  <div class="page-header">
+    <% if current_user %>
+  <h2>Welcome <%= current_user.name %></h2>
+<% end %>
+  </div>
+  <ul class="nav nav-pills" role="tablist">
+    <li role="presentation">
+      <a href="/account">Profile</a>
+    </li>
+    <li role="presentation" class="active">
+      <a href="/account/currently_reading">Currently Reading</a>
+    </li>
+    <li role="presentation">
+      <a href="#">Completed</a>
+    </li>
+    <li role="presentation">
+      <a href="#">Reviews</a>
+    </li>
+  </ul>
+</div>
+
+<div>
+  <div class="currently_reading">
+    <% current_user.book_ownerships.each do |books| %>
+    <% if books.completed == false %>
+    <img src="http://livethroughbooks.files.wordpress.com/2010/04/wuthering-heights.jpg">
+    <% current_user.books.each do |book| %>
+      <%= book.title %>
+      <%= book.author %>
+      <%= current_user.book_ownerships.first.current_page %>
+      <% end %>
+      <% end %>
+      <% end %>
+  </div>
+  <% current_user.book_ownerships.%>
+  <form action="/account/currently_reading/update/<%= books.id %>" method="post">
+   <input type="hidden" name="_method" value="put">
+    <input type="text" name="current_page">
+    <button type="button" class="btn btn-success">Update current progress</button>
+  </form>
+  <form action="/account/currently_reading/<%= books.id %>/completed" method="post">
+    <input type="hidden" name="_method" value="put">
+    <button type="button" class="btn btn-success">Completed</button>
+  </form>
+</div>

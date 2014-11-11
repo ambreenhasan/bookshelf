@@ -1,5 +1,6 @@
 <header>
   <span id="logout"><a href="/logout">logout</a></span>
+  <span><a href="/books">view all books</a></span>
   <!-- search for books -->
   <!-- search for users-->
 </header>
@@ -12,11 +13,10 @@
   </div>
   <ul class="nav nav-pills" role="tablist">
     <li role="presentation" class="active">
-      <a href="#">Profile</a>
+      <a href="/account">Profile</a>
     </li>
     <li role="presentation">
-      <a href="#">Currently Reading</a>
-      <!-- partials -->
+      <a href="/account/currently_reading">Currently Reading</a>
     </li>
     <li role="presentation">
       <a href="#">Completed</a>
@@ -26,10 +26,32 @@
     </li>
   </ul>
 
-  <!-- add panel for user profile -->
-  <!-- followers -->
-  <!-- following -->
-  <!-- following feed -->
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <div class="panel-title">
+      <%= current_user.name.split[0] %>'s feed
+    </div>
+    <div class="panel-body">
+      <ul>
+        <li>Followers: <%= %></li>
+        <li>Followings: <%= %></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <div class="panel-title">
+      friend feed
+    </div>
+    <div class="panel-body">
+       <!-- following feed -->
+    </div>
+  </div>
+</div>
+</div>
+
 </div>
 
 
