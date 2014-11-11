@@ -2,11 +2,6 @@ get '/' do
   erb :index
 end
 
-get '/books' do
-  erb :books
-  # see books available
-end
-
 get '/signup' do
   erb :signup
 # a user can sign up for an account
