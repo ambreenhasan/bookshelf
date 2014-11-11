@@ -17,6 +17,8 @@ gem 'httparty'
 
 gem 'shotgun'
 
+gem 'googlebooks', git: 'https://github.com/den-sheleh/GoogleBooks.git'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'

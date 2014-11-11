@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/den-sheleh/GoogleBooks.git
+  revision: d6aff22e9c376d048277a01079e97ac3509d7e03
+  specs:
+    googlebooks (0.0.5)
+      httparty
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -94,6 +101,7 @@ DEPENDENCIES
   capybara
   factory_girl
   faker
+  googlebooks!
   httparty
   pg
   rack-test
