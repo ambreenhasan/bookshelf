@@ -3,6 +3,7 @@ get '/account' do
 end
 
 get '/account/currently_reading' do
+  @books = current_user.book_ownerships.where(completed: false)
   erb :currently_reading
 end
 
@@ -29,9 +30,12 @@ put '/account/currently_reading/books/:book_id/completed' do
 end
 
 get '/account/completed' do
+  @books = current_user.book_ownerships.where(completed: true)
+  # @books.first.book
   erb :completed
 end
 
 get '/account/reviews' do
+  @books = current_user.book_ownerships.where(completed: true)
   erb :reviews
 end

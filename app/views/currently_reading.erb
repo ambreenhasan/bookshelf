@@ -19,30 +19,25 @@
       <a href="/account/currently_reading">Currently Reading</a>
     </li>
     <li role="presentation">
-      <a href="#">Completed</a>
+      <a href="/account/completed">Completed</a>
     </li>
     <li role="presentation">
-      <a href="#">Reviews</a>
+      <a href="/account/reviews">Reviews</a>
     </li>
   </ul>
 </div>
 
 <div>
   <div class="currently_reading">
-    <% current_user.book_ownerships.each do |books| %>
-    <% if books.completed == false %>
+    <% @books.each do |book| %>
     <img width="200" height="300" src="http://livethroughbooks.files.wordpress.com/2010/04/wuthering-heights.jpg">
-    <% current_user.books.each do |book| %>
-      <br><%= book.title %><br>
-      <%= book.author %> <br>
-      Current Page: <%= current_user.book_ownerships.first.current_page %> <br>
-      <a href="/account/currently_reading/books/<%= book.id %>/edit">Edit current progress </a> <br>
-      <a href="/account/currently_reading/books/<%= book.id %>/completed"> Completed</a>
-      <% end %>
-      <% end %>
-      <% end %>
+    <br><%= book.book.title %> <br>
+    <%= book.book.author %><br>
+     Current Page: <%= book.current_page %><br>
+    <a href="/account/currently_reading/books/<%= book.book_id %>/edit">Edit current progress </a> <br>
+      <a href="/account/currently_reading/books/<%= book.book_id %>/completed"> Completed</a>
+    <% end %>
   </div>
-
 
 <!--   <a href="/"> Completed</a> -->
 

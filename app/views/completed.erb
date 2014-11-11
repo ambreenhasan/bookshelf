@@ -12,32 +12,27 @@
 <% end %>
   </div>
   <ul class="nav nav-pills" role="tablist">
-    <li role="presentation" class="active">
+    <li role="presentation">
       <a href="/account">Profile</a>
     </li>
     <li role="presentation">
       <a href="/account/currently_reading">Currently Reading</a>
     </li>
-    <li role="presentation">
-      <a href="#">Completed</a>
+    <li role="presentation" class="active">
+      <a href="/account/completed">Completed</a>
     </li>
     <li role="presentation">
-      <a href="#">Reviews</a>
+      <a href="/account/reviews">Reviews</a>
     </li>
   </ul>
 
 <div>
   <div class="completed">
-    <% current_user.book_ownerships.each do |books| %>
-    <% if books.completed == true %>
-    <img width="200" height="300" src="http://livethroughbooks.files.wordpress.com/2010/04/wuthering-heights.jpg">
-    <% current_user.books.each do |book| %>
-      <br><%= book.title %><br>
-      <%= book.author %> <br>
-      Current Page: <%= current_user.book_ownerships.first.current_page %> <br>
-      <% end %>
-      <% end %>
-      <% end %>
+    <% @books.each do |book| %>
+    <img width="200" height="300" src="http://www.beyondhollywood.com/uploads/2012/02/Paradise-Lost-Book-Cover-e1328817248834.jpg">
+    <br><%= book.book.title %> <br>
+    <%= book.book.author %><br>
+    <% end %>
   </div>
 
 </div>
