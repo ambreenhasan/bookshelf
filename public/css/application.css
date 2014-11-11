@@ -52,3 +52,7 @@ ul > li {
   margin-left: 300px;
   margin-right: 300px;
 }
+
+.currently_reading, .completed {
+  text-align: center;
+}

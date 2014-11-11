@@ -1,0 +1,9 @@
+<h3>Edit your current progress</h3>
+
+<form action="/account/currently_reading/books/<%= @books.book_id%>/edit" method="post">
+  <input type="hidden" name="_method" value="put">
+  <label for="title">Current Page</label>
+  <input type="text" name="current_page" value="<%= @books.current_page %>"/>
+  </br>
+  <input type="submit" value="Update progress"/>
+</form>

@@ -12,10 +12,10 @@
 <% end %>
   </div>
   <ul class="nav nav-pills" role="tablist">
-    <li role="presentation">
+    <li role="presentation" class="active">
       <a href="/account">Profile</a>
     </li>
-    <li role="presentation" class="active">
+    <li role="presentation">
       <a href="/account/currently_reading">Currently Reading</a>
     </li>
     <li role="presentation">
@@ -25,35 +25,24 @@
       <a href="#">Reviews</a>
     </li>
   </ul>
-</div>
 
 <div>
-  <div class="currently_reading">
+  <div class="completed">
     <% current_user.book_ownerships.each do |books| %>
-    <% if books.completed == false %>
+    <% if books.completed == true %>
     <img width="200" height="300" src="http://livethroughbooks.files.wordpress.com/2010/04/wuthering-heights.jpg">
     <% current_user.books.each do |book| %>
       <br><%= book.title %><br>
       <%= book.author %> <br>
       Current Page: <%= current_user.book_ownerships.first.current_page %> <br>
-      <a href="/account/currently_reading/books/<%= book.id %>/edit">Edit current progress </a> <br>
-      <a href="/account/currently_reading/books/<%= book.id %>/completed"> Completed</a>
       <% end %>
       <% end %>
       <% end %>
   </div>
 
-
-<!--   <a href="/"> Completed</a> -->
-
-
-  <!-- <form action="/account/currently_reading/books/:book_id/edit" method="post">
-   <input type="hidden" name="_method" value="put">
-    <input type="text" name="current_page">
-    <button type="button" class="btn btn-success">Update current progress</button>
-  </form>
-  <form action="/account/currently_reading/completed" method="post">
-    <input type="hidden" name="_method" value="put">
-    <button type="button" class="btn btn-success">Completed</button>
-  </form> -->
 </div>
+
+
+
+
+
