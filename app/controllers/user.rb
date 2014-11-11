@@ -39,3 +39,14 @@ get '/account/reviews' do
   @books = current_user.book_ownerships.where(completed: true)
   erb :reviews
 end
+
+get '/account/reviews/books/:book_id/review' do
+  @books = current_user.book_ownerships.find_by_book_id(params[:book_id])
+  erb :review_form
+end
+
+put '/account/reviews/books/:book_id/review' do
+  user = current_user.book_ownerships.find_by_book_id(params[:book_id])
+  user.update_attributes(book_review: params[:book_review])
+  redirect '/account/reviews'
+end

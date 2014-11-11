@@ -53,6 +53,6 @@ ul > li {
   margin-right: 300px;
 }
 
-.currently_reading, .completed {
+.currently_reading, .completed, .reviews {
   text-align: center;
 }
