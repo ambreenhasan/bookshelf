@@ -3,8 +3,7 @@ get '/books' do
   # see books available
 end
 
-get '/books/search/:searched_item'
-  @books = Book.book_search(params[:searched_item])
-#googlebooks ruby wrapper
+get '/books/search' do
+  @books = Book.new.book_search(params[:searched_item])
   erb :book_search_results
 end
