@@ -35,7 +35,10 @@
     <%= book.book.author %><br>
      Current Page: <%= book.current_page %><br>
     <a href="/account/currently_reading/books/<%= book.book_id %>/edit">Edit current progress </a> <br>
-      <a href="/account/currently_reading/books/<%= book.book_id %>/completed"> Completed</a>
+    <form action="/account/currently_reading/books/<%= book.book_id %>/completed" method="post">
+      <input type="hidden" name="_method" value="put">
+      <input type="submit" value="Complete">
+    </form>
     <% end %>
   </div>
 

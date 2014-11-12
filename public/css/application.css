@@ -56,3 +56,18 @@ ul > li {
 .currently_reading, .completed, .reviews {
   text-align: center;
 }
+
+#search_books {
+  margin-right: 20px;
+  margin-top: -45px;
+  float: right;
+}
+
+.book_searched_results {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2;
+}

@@ -1,6 +1,14 @@
-<div class="book_searched_results">
-  <% @books.each do |book| %>
-  <%= book.authors %>
-  <img width="200" height="300" src="<%= book.image_link(:zoom => 6) %>">
-  <% end %>
+<div class="book_searched_results container">
+    <div class="span4">
+      <% @books.each do |book| %>
+      <img width="200" height="300" src="<%= book.image_link(:zoom => 6, :curl => true) %>">
+      <br>
+      <%= book.authors %> <br>
+      <%= book.title %><br>
+
+      <form action="" method="">
+        <input type="submit" value="Add to collection">
+      </form>
+       <% end %>
+  </div>
 </div>
