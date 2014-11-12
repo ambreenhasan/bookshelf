@@ -1,14 +1,19 @@
 <div class="book_searched_results container">
-    <div class="span4">
-      <% @books.each do |book| %>
+  <div class="span4">
+    <% @books.each do |book| %>
       <img width="200" height="300" src="<%= book.image_link(:zoom => 6, :curl => true) %>">
       <br>
       <%= book.authors %> <br>
       <%= book.title %><br>
 
-      <form action="/books/add/<%= @title %>/<%= @author %>/<%= @book_cover %>" method="post">
-        <input type="submit" value="Add to collection">
+      <form action="/books/add" method="post">
+
+        <input type="hidden" name="book[title]" value="<%= book.title %>" />
+        <input type="hidden" name="book[author]" value= "<%= book.authors %>" />
+        <input type="hidden" name="book[book_cover]" value= "<%= book.image_link %>" />
+        <input type="hidden" name="book[isbn]" value="<%= book.isbn %>"/>
+        <input type="submit" value="Add to collection" />
       </form>
-       <% end %>
+    <% end %>
   </div>
 </div>

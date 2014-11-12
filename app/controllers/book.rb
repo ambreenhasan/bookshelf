@@ -9,21 +9,25 @@ get '/books/search' do
 end
 
 get '/books/add' do
-  @title = params[:title]
-  @author = params[:author]
-  @book_cover = params[:book_cover]
+
 end
 
 
 
-post '/books/add/' do
+post '/books/add' do
+  new_book = Book.new(title: params[:title], author: params[:author], book_cover: params[:book_cover], isbn:params[:isbn])
 
-
-
-  add_book_to_collection(params[:title], params[:author], params[:book_cover])
-  redirect 'account/collection'
+  if new_book.save
+    current_user.books << new_book
+    redirect 'account/collection'
+  else
+    redirect '/error'
+  end
 end
 
+get '/error' do
+  "Error"
+end
 
 # find id of current user
 # create a new book with params
