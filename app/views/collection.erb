@@ -5,6 +5,11 @@
   <!-- search for users-->
 </header>
 
+<form action="/books/search" method="get">
+    <input type="text" name="searched_item" placeholder="Search for a book">
+    <input type="submit" value="Search!">
+  </form>
+
 <div class="user_container">
   <div class="page-header">
     <% if current_user %>
@@ -18,11 +23,11 @@
     <li role="presentation">
       <a href="/account/currently_reading">Currently Reading</a>
     </li>
-    <li role="presentation">
+    <li role="presentation" class="active">
       <a href="/account/reviews">Collection</a>
     </li>
     <li role="presentation">
-      <a href="/account/completed" class="active">Completed</a>
+      <a href="/account/completed">Completed</a>
     </li>
     <li role="presentation">
       <a href="/account/reviews">Reviews</a>
@@ -32,8 +37,9 @@
 <div class="collection">
   <div>
     <% @books.each do |book| %>
-    <%= book.title %>
-    <%= book.author %>
+    <%= book.title %><br>
+    <%= book.author %><br>
+    <br>
     <% end %>
   </div>
 </div>

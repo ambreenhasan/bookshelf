@@ -1,9 +1,13 @@
 <header>
   <span id="logout"><a href="/logout">logout</a></span>
-  <span><a href="/books">view all books</a></span>
   <!-- search for books -->
   <!-- search for users-->
 </header>
+
+<form action="/books/search" method="get">
+    <input type="text" name="searched_item" placeholder="Search for a book">
+    <input type="submit" value="Search!">
+  </form>
 
 <div class="user_container">
   <div class="page-header">
@@ -17,6 +21,9 @@
     </li>
     <li role="presentation">
       <a href="/account/currently_reading">Currently Reading</a>
+    </li>
+    <li role="presentation">
+      <a href="/account/collection">Collection</a>
     </li>
     <li role="presentation" class="active">
       <a href="/account/completed">Completed</a>
