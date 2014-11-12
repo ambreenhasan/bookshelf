@@ -50,3 +50,8 @@ put '/account/reviews/books/:book_id/review' do
   user.update_attributes(book_review: params[:book_review])
   redirect '/account/reviews'
 end
+
+get '/account/collection' do
+  @books = current_user.books
+  erb :collection
+end

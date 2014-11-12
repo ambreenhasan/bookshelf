@@ -1,0 +1,46 @@
+<header>
+  <span id="logout"><a href="/logout">logout</a></span>
+  <span><a href="/books">view all books</a></span>
+  <!-- search for books -->
+  <!-- search for users-->
+</header>
+
+<div class="user_container">
+  <div class="page-header">
+    <% if current_user %>
+  <h2>Welcome <%= current_user.name %></h2>
+<% end %>
+  </div>
+  <ul class="nav nav-pills" role="tablist">
+    <li role="presentation">
+      <a href="/account">Profile</a>
+    </li>
+    <li role="presentation">
+      <a href="/account/currently_reading">Currently Reading</a>
+    </li>
+    <li role="presentation">
+      <a href="/account/reviews">Collection</a>
+    </li>
+    <li role="presentation">
+      <a href="/account/completed" class="active">Completed</a>
+    </li>
+    <li role="presentation">
+      <a href="/account/reviews">Reviews</a>
+    </li>
+  </ul>
+
+<div class="collection">
+  <div>
+    <% @books.each do |book| %>
+    <%= book.title %>
+    <%= book.author %>
+    <% end %>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
