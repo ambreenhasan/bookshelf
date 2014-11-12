@@ -6,7 +6,7 @@
       <%= book.authors %> <br>
       <%= book.title %><br>
 
-      <form action="" method="">
+      <form action="/books/add/<%= @title %>/<%= @author %>/<%= @book_cover %>" method="post">
         <input type="submit" value="Add to collection">
       </form>
        <% end %>

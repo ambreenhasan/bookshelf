@@ -8,4 +8,6 @@ class Book < ActiveRecord::Base
   def book_search(book)
     GoogleBooks.search(book)
   end
+
+
 end
