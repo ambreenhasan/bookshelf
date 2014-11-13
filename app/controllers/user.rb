@@ -42,6 +42,7 @@ end
 
 get '/account/reviews/books/:book_id/review' do
   @books = current_user.book_ownerships.find_by_book_id(params[:book_id])
+  @books_info = current_user.books.find(params[:book_id])
   erb :review_form
 end
 

@@ -1,4 +1,5 @@
 <div class="review-container">
+
   <% @reviewed_book.each do |book| %>
   <img src="<%= book.book_cover %>"><br>
   <%= book.title %><br>
@@ -13,4 +14,23 @@
   <% @reviewed_user.each do |user| %>
   by <%= user.name %>
   <% end %><br>
+</div>
+
+
+<div class="review-table">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Review</th>
+      <th>Reviewer</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tbody class="active">
+    <td></td>
+
+  </tbody>
+</table>
 </div>

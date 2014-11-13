@@ -1,6 +1,13 @@
-<form action="/account/reviews/books/<%= @books.book_id %>/review" method="post">
-  <input type="hidden" name="_method" value="put">
-  <input type="text" name="book_review" />
-  </br>
-  <input type="submit" value="Make a review!"/>
+
+
+<div class="make-review">
+  <h3>Make a review of <%= @books_info.title %> </h3>
+  <form role="form" action="/account/reviews/books/<%= @books.book_id %>/review" method="post">
+    <div class="form-group">
+      <input type="hidden" name="_method" value="put">
+      <input class="review-input" type="text" name="book_review" /><br><br>
+     <br>
+      <button type="submit" class="btn btn-default">Make a review</button>
+    </div>
   </form>
+</div>

@@ -111,6 +111,16 @@ footer {
   text-align: center;
 }
 
-.review-container {
+.make-review {
+  margin-top: 30px;
+  text-align: center;
+}
 
+.review-input {
+  min-width: 500px;
+  min-height:300px;
+}
+
+.review-table {
+  text-align: center;
 }
