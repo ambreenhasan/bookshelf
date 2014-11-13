@@ -48,11 +48,11 @@
     <% if owned.currently_reading == false && owned.completed == false %>
     <form action="/account/currently_reading/books/<%= book.id %>" method="post">
       <input type="hidden" name="_method" value="put">
-      <input type="submit" value="Add to Currently Reading">
+       <button type="submit" class="btn btn-sm btn-warning">Add to current reading</button>
     </form>
     <form action="/account/currently_reading/books/<%= book.id %>/completed" method="post">
       <input type="hidden" name="_method" value="put">
-      <input type="submit" value="Add to Complete">
+      <button type="submit" class="btn btn-sm btn-warning">Add to complete</button>
     </form>
     <% end %>
      <% end %>

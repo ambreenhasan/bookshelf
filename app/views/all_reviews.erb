@@ -1,4 +1,10 @@
-<div>
+<div class="review-container">
+  <% @reviewed_book.each do |book| %>
+  <img src="<%= book.book_cover %>"><br>
+  <%= book.title %><br>
+  <%= book.author %><br>
+  <% end %><br>
+
   <% @reviews.each do |review| %>
   <%= review.book_review %>
   <%= review.time_difference %>
@@ -6,10 +12,5 @@
 
   <% @reviewed_user.each do |user| %>
   by <%= user.name %>
-  <% end %><br>
-
-  <% @reviewed_book.each do |book| %>
-  <%= book.title %>
-  <%= book.author %>
   <% end %><br>
 </div>
