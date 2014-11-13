@@ -43,7 +43,6 @@
     <img width="200" height="300" src="<%= book.book_cover %>"> <br>
     <span class="title"><%= book.title %></span><br>
     <%= book.author %><br>
-    <br>
     <% @book_ownerships.each do |owned| %>
     <% if owned.currently_reading == false && owned.completed == false %>
     <form action="/account/currently_reading/books/<%= book.id %>" method="post">
@@ -55,7 +54,7 @@
       <button type="submit" class="btn btn-sm btn-warning">Add to complete</button>
     </form>
     <% end %>
-     <% end %>
+    <% end %>
     <% end %>
   </div>
 </div>

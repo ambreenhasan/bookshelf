@@ -1,36 +1,16 @@
-<div class="review-container">
-
-  <% @reviewed_book.each do |book| %>
-  <img src="<%= book.book_cover %>"><br>
-  <%= book.title %><br>
-  <%= book.author %><br>
-  <% end %><br>
-
-  <% @reviews.each do |review| %>
-  <%= review.book_review %>
-  <%= review.time_difference %>
-  <% end %><br>
-
-  <% @reviewed_user.each do |user| %>
-  by <%= user.name %>
-  <% end %><br>
-</div>
-
-
-<div class="review-table">
-<table class="table">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Author</th>
-      <th>Review</th>
-      <th>Reviewer</th>
-      <th>Time</th>
-    </tr>
-  </thead>
-  <tbody class="active">
-    <td></td>
-
-  </tbody>
-</table>
+<div class="container">
+  <div row="row">
+    <div class="col-md-3">
+    <% @reviewed_book.each do |book| %>
+    <h5><%= book.title%>, <%= book.author %></h5>
+    <% end %>
+    <% @reviews.each do |review| %>
+    <p><%= review.book_review %></p>
+    <p><%= review.time_difference %></p>
+    <% end %>
+    <% @reviewed_user.each do |user| %>
+    <p>by <%= user.name %><p>
+    <% end %>
+    </div>
+  </div>
 </div>

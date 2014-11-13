@@ -107,6 +107,8 @@ footer {
   font-weight: bold;
 }
 
+/*~~~~~~ALL REVIEWS~~~~~~~~~~*/
+
 .reviews {
   text-align: center;
 }
@@ -123,4 +125,22 @@ footer {
 
 .review-table {
   text-align: center;
+}
+
+.review-container {
+  margin: 20px 20px 0 20px;
+  overflow: auto;
+}
+
+.book-image {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.book-image img {
+  display: block;
+}
+
+.review-book-info {
+  float: right;
 }

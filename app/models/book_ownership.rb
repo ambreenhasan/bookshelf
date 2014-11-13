@@ -3,7 +3,7 @@ class BookOwnership < ActiveRecord::Base
   belongs_to :book
 
   def time_difference
-    seconds_since = (Time.now.to_i - self.created_at.to_i)
+    seconds_since = (Time.now.to_i - self.updated_at.to_i)
     if seconds_since >= 86400 #seconds per day
       return days(seconds_since)
     elsif seconds_since >= 3600 #seconds per hour
