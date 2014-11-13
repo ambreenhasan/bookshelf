@@ -73,8 +73,13 @@ footer {
   margin-right: 300px;
 }
 
-.currently_reading, .completed, .reviews {
+.currently_reading, .completed, .collection {
+  line-height: 20px;
   text-align: center;
+  margin-top: 5px;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
 }
 
 #search_books {
@@ -87,7 +92,21 @@ footer {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  -webkit-column-count: 2; /* Chrome, Safari, Opera */
-  -moz-column-count: 2; /* Firefox */
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
   column-count: 2;
+}
+
+#search_books_account {
+  margin-right: 20px;
+  margin-top: -15px;
+  float: right;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.reviews {
+  text-align: center;
 }

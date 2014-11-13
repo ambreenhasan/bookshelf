@@ -904,7 +904,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #000;
-  background-color: #54C4E5;;
+  background-color: #54C4E5;
 }
 input,
 button,
@@ -920,7 +920,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #2a6496;
+  color: #fff;
   text-decoration: underline;
 }
 a:focus {
@@ -3689,7 +3689,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #eee;
+  background-color: #E4A061;
 }
 .nav > li.disabled > a {
   color: #777;
@@ -3798,7 +3798,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #fff;
-  background-color: #428bca;
+  background-color: #CA782C;
 }
 .nav-stacked > li {
   float: none;

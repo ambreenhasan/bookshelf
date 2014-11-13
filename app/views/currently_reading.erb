@@ -1,13 +1,20 @@
 <header>
-  <span id="logout"><a href="/logout">logout</a></span>
-  <span><a href="/books">view all books</a></span>
-  <!-- search for books -->
-  <!-- search for users-->
+  <nav>
+    <ul>
+      <li><a href="/logout">logout</a></li>
+      <li><a href="/books/reviews">latest book reviews</a></li>
+    </ul>
+  </nav>
 </header>
-<form action="/books/search" method="get">
-    <input type="text" name="searched_item" placeholder="Search for a book">
-    <input type="submit" value="Search!">
+<div id="search_books">
+  <form action="/books/search" method="get">
+  <input type="text" name="searched_item" placeholder="Search for a book">
+  <button type="submit" class="btn btn-sm btn-warning">Search</button>
   </form>
+</div>
+
+
+
 <div class="user_container">
   <div class="page-header">
     <% if current_user %>
@@ -33,7 +40,6 @@
   </ul>
 </div>
 
-<div>
   <div class="currently_reading">
     <% @books.each do |book| %>
     <% if book.currently_reading == true %>
@@ -44,22 +50,11 @@
     <a href="/account/currently_reading/books/<%= book.book_id %>/edit">Edit current progress </a> <br>
     <form action="/account/currently_reading/books/<%= book.book_id %>/completed" method="post">
       <input type="hidden" name="_method" value="put">
-      <input type="submit" value="Complete">
+      <button type="submit" class="btn btn-sm btn-warning">Complete</button>
     </form>
     <% end %>
     <% end %>
   </div>
 
-<!--   <a href="/"> Completed</a> -->
-
-
-  <!-- <form action="/account/currently_reading/books/:book_id/edit" method="post">
-   <input type="hidden" name="_method" value="put">
-    <input type="text" name="current_page">
-    <button type="button" class="btn btn-success">Update current progress</button>
-  </form>
-  <form action="/account/currently_reading/completed" method="post">
-    <input type="hidden" name="_method" value="put">
-    <button type="button" class="btn btn-success">Completed</button>
-  </form> -->
+  </div>
 </div>
