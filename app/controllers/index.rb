@@ -11,12 +11,14 @@ post '/signup' do
   #creates a new user and redirects to account page
 
   current_user = User.new(name: params[:name], email: params[:email], password: params[:password])
-  if current_user.save
-    session[:user_id] = current_user.id
+  p current_user.errors
+  if current_user.save!
+    p session[:user_id] = current_user.id
     redirect '/account'
   else
     redirect '/error'
   end
+
 end
 
 get '/login' do

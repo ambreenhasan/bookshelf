@@ -4,6 +4,7 @@ class CreateBooks < ActiveRecord::Migration
       t.string :title
       t.string :author
       t.string :book_cover
+      t.integer :isbn, :limit => 8
 
       t.timestamps
     end
