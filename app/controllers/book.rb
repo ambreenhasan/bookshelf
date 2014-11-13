@@ -27,9 +27,6 @@ get '/error' do
 end
 
 get '/books/reviews' do
-  @reviews = BookOwnership.where.not(book_review: nil)
-  @reviewed_user = @reviews.map {|user| User.find(user.user_id)}
-  @reviewed_book = @reviews.map {|book| Book.find(book.book_id)}
-
+  @book_ownerships = BookOwnership.where.not(book_review: nil)
   erb :all_reviews
 end
