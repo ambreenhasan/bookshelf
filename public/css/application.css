@@ -1,8 +1,13 @@
+/*~~~~~~~~~~~~~INDEX~~~~~~~~~~~~~~~~~~~~~~~~*/
+.navigation {
+  background-color: #445E66;
+  box-shadow: 1px 1px 5px #000;
+}
+
 #index_container {
   margin-top: 130px;
   text-align: center;
   font-family: 'Arimo', sans-serif;
-  background-color:
 }
 
 #welcome {
@@ -37,6 +42,21 @@ ul > li {
   margin-left: 300px;
   text-align: center;
 }
+
+footer {
+  margin-top: 150px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+#heart {
+  font-size: 20px;
+  color: red;
+   -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*~~~~~~~~~~~~~~~~ACCOUNT~~~~~~~~~~~~~~~~~~~~~*/
 
 .user_container {
   margin-left: 20px;
