@@ -10,7 +10,6 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, on: :create }
 
-  # validates :password, length: { in: 6..20 }
 
   has_many :book_ownerships
   has_many :books, through: :book_ownerships

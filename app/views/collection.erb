@@ -37,9 +37,22 @@
 <div class="collection">
   <div>
     <% @books.each do |book| %>
+    <img width="200" height="300" src="<%= book.book_cover %>"> <br>
     <%= book.title %><br>
     <%= book.author %><br>
     <br>
+    <% @book_ownerships.each do |owned| %>
+    <% if owned.currently_reading == false && owned.completed == false %>
+    <form action="/account/currently_reading/books/<%= book.id %>" method="post">
+      <input type="hidden" name="_method" value="put">
+      <input type="submit" value="Add to Currently Reading">
+    </form>
+    <form action="/account/currently_reading/books/<%= book.id %>/completed" method="post">
+      <input type="hidden" name="_method" value="put">
+      <input type="submit" value="Add to Complete">
+    </form>
+    <% end %>
+     <% end %>
     <% end %>
   </div>
 </div>

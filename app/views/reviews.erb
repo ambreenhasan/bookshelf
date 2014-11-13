@@ -35,11 +35,11 @@
   </ul>
 </div>
 
-<h3>review a book you've read!</h3>
+<!-- <h3>review a book you've read!</h3> -->
 <div>
   <div class="reviews">
     <% @books.each do |book| %>
-    <img width="200" height="300" src="http://www.beyondhollywood.com/uploads/2012/02/Paradise-Lost-Book-Cover-e1328817248834.jpg">
+    <img width="200" height="300" src="<%= book.book.book_cover %>"><br>
     <br><%= book.book.title %> <br>
     <%= book.book.author %><br>
 

@@ -53,5 +53,12 @@ end
 
 get '/account/collection' do
   @books = current_user.books
+  @book_ownerships = current_user.book_ownerships
   erb :collection
+end
+
+put '/account/currently_reading/books/:book_id' do
+  user = current_user.book_ownerships.find_by_book_id(params[:book_id])
+  user.update_attributes(currently_reading: true)
+  redirect '/account/currently_reading'
 end

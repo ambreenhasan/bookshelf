@@ -36,7 +36,8 @@
 <div>
   <div class="currently_reading">
     <% @books.each do |book| %>
-    <img width="200" height="300" src="http://livethroughbooks.files.wordpress.com/2010/04/wuthering-heights.jpg">
+    <% if book.currently_reading == true %>
+    <img width="200" height="300" src="<%= book.book.book_cover %>">
     <br><%= book.book.title %> <br>
     <%= book.book.author %><br>
      Current Page: <%= book.current_page %><br>
@@ -45,6 +46,7 @@
       <input type="hidden" name="_method" value="put">
       <input type="submit" value="Complete">
     </form>
+    <% end %>
     <% end %>
   </div>
 
