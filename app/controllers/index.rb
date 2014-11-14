@@ -17,7 +17,7 @@ post '/signup' do
   current_user = User.new(name: params[:name], email: params[:email], password: params[:password])
 
   if current_user.save
-    p session[:user_id] = current_user.id
+    session[:user_id] = current_user.id
     redirect '/account'
   else
     redirect '/error'
