@@ -1,6 +1,4 @@
 # Bookshelf
-=========
-
 A way of keeping track of the books you love and read.
 
 # List of Technologies:
@@ -9,4 +7,4 @@ A way of keeping track of the books you love and read.
 * Google Books API
 
 # Demo
-[Heroku App](https://bookshelf-it.herokuapp.com/)
+(https://bookshelf-it.herokuapp.com/)
