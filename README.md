@@ -7,4 +7,4 @@ A way of keeping track of the books you love and read.
 * Google Books API
 
 # Demo
-(https://bookshelf-it.herokuapp.com/)
+https://bookshelf-it.herokuapp.com/
